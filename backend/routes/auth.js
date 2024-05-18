@@ -20,7 +20,7 @@ router.post("/signup", async (req, res) => {
 		user.password = await bcrypt.hash(password, salt);
 		await user.save();
 		const payload = { user: { id: user.id } };
-		jwt.sign(payload, "your_jwt_secret", { expiresIn: 360000 }, (err, token) => {
+		jwt.sign(payload, process.env.SECRET, { expiresIn: 360000 }, (err, token) => {
 			if (err) throw err;
 			res.json({ token });
 		});
