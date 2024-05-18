@@ -16,7 +16,10 @@ const AuthForm = ({ setToken }) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post(`http://localhost:5000/api/auth/${isLogin ? "login" : "signup"}`, formData);
+			const res = await axios.post(
+				`https://hostel-managment-v2-0.onrender.com/api/auth/${isLogin ? "login" : "signup"}`,
+				formData
+			);
 			setToken(res.data.token);
 		} catch (err) {
 			console.error(err.response ? err.response.data : err.message);

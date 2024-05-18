@@ -12,7 +12,7 @@ const Attendance = ({ token }) => {
 
 	useEffect(() => {
 		const fetchAttendance = async () => {
-			const res = await axios.get("http://localhost:5000/api/attendance", {
+			const res = await axios.get("https://hostel-managment-v2-0.onrender.com/api/attendance", {
 				headers: { "x-auth-token": token },
 			});
 			setAttendance(res.data);
@@ -23,7 +23,7 @@ const Attendance = ({ token }) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		const res = await axios.post(
-			"http://localhost:5000/api/attendance",
+			"https://hostel-managment-v2-0.onrender.com/api/attendance",
 			{ date: selectedDate, status },
 			{ headers: { "x-auth-token": token } }
 		);

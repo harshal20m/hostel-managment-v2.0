@@ -10,7 +10,7 @@ const Dashboard = () => {
 	useEffect(() => {
 		if (token) {
 			const fetchUser = async () => {
-				const res = await axios.get("http://localhost:5000/api/auth/user", {
+				const res = await axios.get("https://hostel-managment-v2-0.onrender.com/api/auth/user", {
 					headers: { "x-auth-token": token },
 				});
 				setUser(res.data);
