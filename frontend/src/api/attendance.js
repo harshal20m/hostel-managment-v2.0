@@ -4,7 +4,7 @@ import express from "express";
 import auth from "../middleware/auth.js"; // Assuming you have authentication middleware
 import Attendance from "../models/Attendance.js"; // Assuming you have a Mongoose model for Attendance
 
-const router = express.Router();
+const router = express.Router(); //creatring a router 
 
 // @route   GET api/attendance
 // @desc    Get all attendance records
