@@ -8,7 +8,7 @@ const HomePage = () => {
 				to="/dashboard"
 				className="inline-block  mt-5 px-5 py-3 text-white bg-blue-500 rounded hover:bg-blue-700"
 			>
-				Go to Dashboard
+				Go to Dashboard .
 			</Link>
 		</div>
 	);
